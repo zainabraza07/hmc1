@@ -1,3 +1,10 @@
+// Make all sections visible on page load (fix for mobile)
+window.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("section").forEach(sec => {
+    sec.classList.add("show");
+  });
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('section').forEach(section => {
     section.classList.add('show');
@@ -35,5 +42,6 @@ images.forEach(img => {
 lightbox.addEventListener("click", () => {
   lightbox.style.display = "none";
 });
+
 
 
