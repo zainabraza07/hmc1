@@ -13,12 +13,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #0b1d17;
   color: #ffffff;
-  animation: fadeIn 1.2s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 /* ---------------- Navbar ---------------- */
@@ -50,8 +44,8 @@ nav ul li {
 nav a {
   color: #ffffff;
   text-decoration: none;
-  position: relative;
   padding: 5px 10px;
+  position: relative;
   transition: background 0.3s;
 }
 
@@ -110,31 +104,17 @@ nav a:hover {
 /* ---------------- Sections ---------------- */
 section {
   padding: 80px 10%;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-section h2 {
-  color: #6fe3c1;
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-/* ---------------- Trips Section ---------------- */
-.trips-section .cards {
+/* ---------------- Cards (Trips & Team) ---------------- */
+.cards {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
 }
 
-.trips-section .card {
+.card {
   background: #132c25;
   padding: 25px;
   border-radius: 15px;
@@ -142,17 +122,14 @@ section h2 {
   flex: 1 1 300px;
   max-width: 400px;
   text-align: left;
-  transition: transform 0.4s, opacity 0.8s ease, transform 0.8s ease;
-  opacity: 0;
-  transform: translateY(40px);
+  transition: transform 0.3s ease;
 }
 
-.trips-section .card.show {
-  opacity: 1;
-  transform: translateY(0);
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
 }
 
-.trips-section .card img.trip-image {
+.card img.trip-image {
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -160,61 +137,17 @@ section h2 {
 }
 
 /* ---------------- Team Section ---------------- */
-.team-section {
-  padding: 60px 10%;
-  background: #0b1d17;
-  color: #ffffff;
-  text-align: center;
-}
-
 .team-section .cards {
-  display: flex;
   flex-direction: column;
-  gap: 30px;
   align-items: center;
 }
 
 .team-section .card {
-  background: #132c25;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
   width: 100%;
   max-width: 400px;
-  text-align: left;
-  transition: transform 0.3s, opacity 0.8s ease, transform 0.8s ease;
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.team-section .card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.team-section .card h3 {
-  margin-bottom: 10px;
-  color: #6fe3c1;
-}
-
-.team-section .card p {
-  margin-bottom: 6px;
-  font-size: 1rem;
 }
 
 /* ---------------- Gallery Section ---------------- */
-.gallery-section {
-  padding: 60px 10%;
-  background: #0b1d17;
-  color: #ffffff;
-  text-align: center;
-}
-
-.gallery-section h2 {
-  color: #6fe3c1;
-  margin-bottom: 30px;
-}
-
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -225,7 +158,7 @@ section h2 {
   width: 100%;
   border-radius: 15px;
   cursor: pointer;
-  transition: transform 0.4s, box-shadow 0.4s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery img:hover {
@@ -253,7 +186,14 @@ section h2 {
   border-radius: 20px;
 }
 
-/* ---------------- About Section ---------------- */
-.about-section {
-  padding: 60px 10%;
+/* ---------------- Responsive ---------------- */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
