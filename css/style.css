@@ -307,3 +307,15 @@ section.team-section {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+section {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.cards {
+  display: flex !important;
+}
+.card {
+  display: block !important;
+}
+
+
