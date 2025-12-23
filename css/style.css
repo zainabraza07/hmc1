@@ -112,20 +112,12 @@ section {
   padding: 80px 10%;
   opacity: 0;
   transform: translateY(40px);
-  transition: 0.8s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 section.show {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-/* Fix for mobile: sections always visible */
-@media (max-width: 768px) {
-  section {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
+  opacity: 1;
+  transform: translateY(0);
 }
 
 section h2 {
@@ -150,11 +142,14 @@ section h2 {
   flex: 1 1 300px;
   max-width: 400px;
   text-align: left;
-  transition: transform 0.4s;
+  transition: transform 0.4s, opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.trips-section .card:hover {
-  transform: translateY(-10px) scale(1.02);
+.trips-section .card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .trips-section .card img.trip-image {
@@ -187,11 +182,14 @@ section h2 {
   width: 100%;
   max-width: 400px;
   text-align: left;
-  transition: transform 0.3s;
+  transition: transform 0.3s, opacity 0.8s ease, transform 0.8s ease;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.team-section .card:hover {
-  transform: translateY(-8px) scale(1.02);
+.team-section .card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .team-section .card h3 {
@@ -202,15 +200,6 @@ section h2 {
 .team-section .card p {
   margin-bottom: 6px;
   font-size: 1rem;
-}
-
-/* Advisor photo */
-.advisor-photo {
-  width: 150px;
-  height: auto;
-  border-radius: 0;
-  object-fit: cover;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 /* ---------------- Gallery Section ---------------- */
@@ -267,6 +256,4 @@ section h2 {
 /* ---------------- About Section ---------------- */
 .about-section {
   padding: 60px 10%;
-  opacity: 1 !important;
-  transform: translateY(0) !important;
 }
