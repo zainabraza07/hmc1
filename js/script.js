@@ -1,6 +1,25 @@
 // Scroll reveal animation
 const sections = document.querySelectorAll("section");
 
+// Function to reveal sections in viewport
+function revealSections() {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+}
+
+// Run on scroll
+window.addEventListener("scroll", revealSections);
+
+// Run on page load (fixes mobile issues)
+window.addEventListener("load", revealSections);
+
+// Scroll reveal animation
+const sections = document.querySelectorAll("section");
+
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
@@ -29,3 +48,4 @@ images.forEach(img => {
 lightbox.addEventListener("click", () => {
   lightbox.style.display = "none";
 });
+
