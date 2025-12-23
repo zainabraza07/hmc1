@@ -350,41 +350,8 @@ section {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
-/* ---------------- Trips Section Responsive Fix ---------------- */
-.trips-section .cards {
-  display: flex !important;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s ease;
 }
-
-.trips-section .card {
-  flex: 1 1 300px !important;
-  max-width: 400px !important;
-  width: 100% !important;
-  text-align: left;
-}
-
-/* Stack vertically on small screens */
-@media (max-width: 768px) {
-  .trips-section .cards {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  .trips-section .card {
-    width: 90% !important;
-    max-width: 400px !important;
-  }
-}
-
-/* Force trips section visible on mobile (prevents scroll hiding) */
-@media (max-width: 768px) {
-  .trips-section {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-  }
-}
-
-
-
-
