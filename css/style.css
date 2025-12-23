@@ -350,6 +350,15 @@ section {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+/* ---------------- Mobile fix: show trips and team immediately ---------------- */
+@media (max-width: 768px) {
+  .trips-section,
+  .team-section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
 
 
 
