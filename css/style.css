@@ -350,8 +350,3 @@ section {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
-section.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 0.8s ease;
-}
