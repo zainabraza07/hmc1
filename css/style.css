@@ -212,7 +212,7 @@ section.team-section {
 }
 
 .advisor-photo {
-  width: 150px;  /* Medium size */
+  width: 350px;  /* Medium size */
   height: auto;  /* Maintain aspect ratio */
   border-radius: 0;  /* Keep square shape */
   object-fit: cover;
@@ -350,3 +350,4 @@ section {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
