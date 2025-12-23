@@ -1,3 +1,9 @@
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('section').forEach(section => {
+    section.classList.add('show');
+  });
+});
+
 // Scroll reveal animation
 const sections = document.querySelectorAll("section");
 
@@ -29,4 +35,5 @@ images.forEach(img => {
 lightbox.addEventListener("click", () => {
   lightbox.style.display = "none";
 });
+
 
