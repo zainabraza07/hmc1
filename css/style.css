@@ -305,6 +305,47 @@ section {
 .card {
   display: block !important;
 }
+/* Trips Section */
+.trips-section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.trips-section .card {
+  flex: 1 1 300px;  /* min width 300px */
+  max-width: 400px;
+  background: #132c25;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  transition: transform 0.4s;
+  text-align: left;
+}
+
+.trips-section .card img.trip-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.trips-section .card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .trips-section .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .trips-section .card {
+    width: 90%;
+    max-width: none;
+  }
+}
 
 
 
