@@ -116,8 +116,16 @@ section {
 }
 
 section.show {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Fix for mobile: sections always visible */
+@media (max-width: 768px) {
+  section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
 }
 
 section h2 {
@@ -156,31 +164,17 @@ section h2 {
   margin-top: 15px;
 }
 
-/* Responsive: stack trips vertically on mobile */
-@media (max-width: 768px) {
-  .trips-section .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .trips-section .card {
-    width: 90%;
-  }
-}
-
 /* ---------------- Team Section ---------------- */
 .team-section {
   padding: 60px 10%;
   background: #0b1d17;
   color: #ffffff;
   text-align: center;
-  opacity: 1 !important;
-  transform: translateY(0) !important;
 }
 
 .team-section .cards {
   display: flex;
-  flex-direction: column; /* vertical stack */
+  flex-direction: column;
   gap: 30px;
   align-items: center;
 }
@@ -225,8 +219,6 @@ section h2 {
   background: #0b1d17;
   color: #ffffff;
   text-align: center;
-  opacity: 1 !important;
-  transform: translateY(0) !important;
 }
 
 .gallery-section h2 {
@@ -252,12 +244,6 @@ section h2 {
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* ---------------- About Section ---------------- */
-.about-section {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
 /* ---------------- Lightbox ---------------- */
 .lightbox {
   position: fixed;
@@ -276,4 +262,11 @@ section h2 {
   max-width: 80%;
   max-height: 80%;
   border-radius: 20px;
+}
+
+/* ---------------- About Section ---------------- */
+.about-section {
+  padding: 60px 10%;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
